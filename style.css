@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    display: flex;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #172554;
+    color: white;
+    position: fixed;
+    padding: 25px 15px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 14px;
+    margin: 7px 0;
+    border: none;
+    background: transparent;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.sidebar button:hover {
+    background: #2563eb;
+}
+
+/* Main */
+
+.main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+}
+
+header {
+    background: white;
+    padding: 25px 35px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: #172554;
+}
+
+header p {
+    margin-top: 8px;
+    color: #666;
+}
+
+/* Sections */
+
+.section {
+    display: none;
+    padding: 30px;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+    color: #172554;
+}
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #555;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #2563eb;
+}
+
+.welcome {
+    background: white;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* Inputs */
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.addBtn,
+.form-box button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+}
+
+/* Tables */
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #172554;
+    color: white;
+}
+
+/* Form */
+
+.form-box {
+    background: white;
+    padding: 25px;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Progress */
+
+.progress {
+    background: #ddd;
+    height: 30px;
+    border-radius: 20px;
+    margin: 10px 0 25px;
+}
+
+.progress-bar {
+    height: 30px;
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+/* Prediction */
+
+#predictionResult {
+    margin-top: 20px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* Mobile */
+
+@media(max-width: 800px) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .main {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
